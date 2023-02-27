@@ -449,9 +449,9 @@ def optimize_mesh(
         #  Backpropagate
         # ==============================================================================================
         total_loss.backward()#single target image loss
-        print('geometry_pos',geometry.vertex_pos)
-        torch.set_printoptions(precision=8,sci_mode=False)
-        print(geometry.vertex_pos.grad)
+        # print('geometry_pos',geometry.vertex_pos)
+        # torch.set_printoptions(precision=8,sci_mode=False)
+        # print(geometry.vertex_pos.grad)
 
         if hasattr(lgt, 'base') and lgt.base.grad is not None and optimize_light:
             lgt.base.grad *= 64
@@ -465,7 +465,7 @@ def optimize_mesh(
             optimizer_mesh.step()
             scheduler_mesh.step()
 
-        print('geometry_pos',geometry.vertex_pos)
+        # print('geometry_pos',geometry.vertex_pos)
 
         # ==============================================================================================
         #  Clamp trainables to reasonable range

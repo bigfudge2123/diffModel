@@ -85,19 +85,16 @@ def load_obj(filename, clear_ks=True, mtl_override=None):
         elif prefix == 'f': # Parse face
             vs = line.split()[1:]
             nv = len(vs)
-            # vv = vs[0].split('/')
-            vv = [vs[0],1,2]
+            vv = vs[0].split('/')
             v0 = int(vv[0]) - 1
             t0 = int(vv[1]) - 1 if vv[1] != "" else -1
             n0 = int(vv[2]) - 1 if vv[2] != "" else -1
             for i in range(nv - 2): # Triangulate polygons
-                # vv = vs[i + 1].split('/')
-                vv = [vs[i+1],1,2]
+                vv = vs[i + 1].split('/')
                 v1 = int(vv[0]) - 1
                 t1 = int(vv[1]) - 1 if vv[1] != "" else -1
                 n1 = int(vv[2]) - 1 if vv[2] != "" else -1
-                # vv = vs[i + 2].split('/')
-                vv = [vs[i+2],1,2]
+                vv = vs[i + 2].split('/')
                 v2 = int(vv[0]) - 1
                 t2 = int(vv[1]) - 1 if vv[1] != "" else -1
                 n2 = int(vv[2]) - 1 if vv[2] != "" else -1
