@@ -1,0 +1,21 @@
+{
+    "ref_mesh": "data/nerd/rubik2_rescaled",
+    "base_mesh":"data/nerd/rubik2_rescaled/final_model.obj",
+    "random_textures": true,
+    "iter": 500,
+    "save_interval": 100,
+    "texture_res": [ 2048, 2048 ],
+    "train_res": [800, 450],
+    "batch": 4,
+    "learning_rate": [0.03, 0.03],
+    "kd_min" : [0.03, 0.03, 0.03],
+    "kd_max" : [0.8, 0.8, 0.8],
+    "ks_min" : [0, 0.08, 0],
+    "ks_max" : [0, 1.0, 1.0],
+    "dmtet_grid" : 5,
+    "mesh_scale" : 0.5,
+    "camera_space_light" : true,
+    "background" : "white",
+    "display" : [{"bsdf":"kd"}, {"bsdf":"ks"}, {"bsdf" : "normal"}],
+    "out_dir": "rubik2"
+}

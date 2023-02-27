@@ -1,0 +1,7 @@
+##ignore this file##
+/.vscode/
+/build/
+/data/
+/images/
+/out/
+/im2mesh/
