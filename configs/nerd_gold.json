@@ -1,4 +1,5 @@
 {
+    "base_mesh": "data/nerd/moldGoldCape_rescaled/cube_candidate_faces.obj",
     "ref_mesh": "data/nerd/moldGoldCape_rescaled",
     "random_textures": true,
     "iter": 5000,

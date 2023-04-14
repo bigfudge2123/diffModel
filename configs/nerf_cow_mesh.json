@@ -1,18 +1,19 @@
 {
-    "base_mesh":"data/nerf_synthetic/chair/sphere.obj",
-    "ref_mesh": "data/nerf_synthetic/chair",
+    "base_mesh":"data/nerf_synthetic/cow_mesh/cow_0.13.obj",
+    "ref_mesh": "data/nerf_synthetic/cow_mesh",
     "random_textures": true,
-    "iter": 1000,
+    "iter": 5000,
     "save_interval": 100,
     "texture_res": [ 2048, 2048 ],
-    "train_res": [800, 800],
+    "train_res": [512, 512],
     "batch": 8,
     "learning_rate": [0.03, 0.01],
-    "ks_min" : [0, 0.08, 0.0],
+    "ks_min" : [0, 0.1, 0.0],
     "dmtet_grid" : 128,
-    "mesh_scale" : 1.0,
+    "mesh_scale" : 0.2,
     "laplace_scale" : 3000,
     "display": [{"latlong" : true}, {"bsdf" : "kd"}, {"bsdf" : "ks"}, {"bsdf" : "normal"}],
+    "layers" : 4,
     "background" : "white",
-    "out_dir": "chair_sphere"
+    "out_dir": "nerf_cow_mesh"
 }
